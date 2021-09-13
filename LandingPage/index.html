@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Startup</title>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=ZHNR6ZN8dc9uEg23TvkkQBZP85C1eXCRNywjiQUOrnxUFKgOxsgbYmijiIcd5EzTR8uZeI6fiDd50MaI98OpnUyYgy1NWhWzwn0-aM3V8M9Hoc7oTwO19DvXkkGQ8FshMLaIts-29mqpEHK9msnjrk3vJrn_MmdST4NDL-0wc6DekgdI8zzs3mAh-HuTn-ocD-LE2Us4f2iXdvGDo9ni8MUty5baKTeojPjzUMW49I0kxtA_xrekBxFxqqQuDbAWAkSLphkLf0zKwH4j8OPmWRsc6iehj7rVe7DWmSp9QkficcBEKJNiuUZPnZD2GJh0PbR3Vq3yEctw0K8u6moYsinA774E5OqHm4R3o49iZ-2YXgyiQWXBjGOD5y1QWa-s49nXE_g5SH1HolLAHqWArJ0SgVHEVnYFXRbZTCrFyjU" charset="UTF-8">
+        </script>
+    <!-- Bootstrap CSS from a CDN. This way you don't have to include the bootstrap file yourself -->
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!-- Your own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+ 
+  <body>
+    <!-- Bootstrap JavaScript from a CDN. This way you don't have to include the bootstrap file yourself -->
+    <div class = "coverphoto">
+      <div class= "coverphoto_top">
+          <img src="https://lh3.googleusercontent.com/pw/ACtC-3d8zM5z-GQonnCmEak48PVktdpERzUubufAO7T_FkQcc-BZjvAgwQ68ItodeFQ8jY4GUFqwX_Sl92vk1oeGLbQLEV8Ee3Tk84FpgGSodKKcUPP9fnMjKqI5H0K3qUZ--_BmaW4T6hDTWHpfYhJGcBPs=w1151-h30-no?authuser=0" alt="" width=100% height=auto>
+      </div>
+      <div class ='title'>
+        <div>
+        The World
+        </div>
+  </div>
+</div>
+  <div class="sidebar">
+      <a href=#content>
+          <section id="content">
+      <div class="menu">
+          <div class="link active"> Description</div>
+      </div>
+  </section>
+      </a>
+  </div>
+<div class="main">
+              <div class="section active">
+                  <div class="header">
+                      Description
+                  </div>
+                  <div class="desc">
+                    In its most general sense, the term "world" refers to the totality of entities, to the whole of reality or to everything that was, is and will be.
+                      <br>
+                      In scientific cosmology the world or universe is commonly defined as "the totality of all space and time; all that is, has been, and will be". 
+              </div>
+              </div>
+              </div>
+      </div>
+</body>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    >
+    const links = Array.from(document.querySelectorAll('.link'))
+        const sections = Array.from(document.querySelectorAll('.section'))
+
+        links.forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                item.classList.add('active');
+
+                links.forEach((link, i) => {
+                    if(i != index) link.classList.remove('active')
+                })
+
+                sections[index].classList.add('active')
+
+                sections.forEach((s, i) => {
+                    if(i != index) s.classList.remove('active')
+                })
+            })
+        })
+
+  </script>
+</html>
