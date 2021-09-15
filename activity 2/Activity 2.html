@@ -1,0 +1,103 @@
+<html>  
+<body>  
+<script>
+
+
+const name = ["Luke Skywalker","C-3PO","R2-D2","Darth Vader","Leia Organa"];
+const height = ["172","167","96","202","150"];
+const mass = ["77","75","32","136","49"]
+const  hairColor = ["blond","n/a","n/a","none","brown"];
+const skinColor = ["fair","gold","white, blue","white","light"];
+const eyeColor = ["blue","yellow","red","yellow","brown"];
+const BirthColor = ["19BBY","112BBY","33BBY","41.9BBY","19BBY"];
+const gender =  ["male","n/a","n/a","male","female"];
+const option = [name,height,mass,hairColor,skinColor,BirthColor,gender];
+
+const arr = [];
+
+start();
+
+function start() {
+    let num = selectOption();
+    let pos = [];
+    switch (num) {
+    case '1':
+    findMale();
+    alert(arr);
+      break;
+    case '2':
+    findfemale();
+    alert(arr);
+      break;
+    case '3':
+    findNA();
+    alert(arr);
+      break;
+    case '4':
+    findHeight();
+    alert(arr);
+      break;
+    default:
+      alert("Invalid");
+      break;
+
+
+    alert(pos + " credentials are valid.");
+}
+ 
+
+function selectOption() {
+  var num = String(prompt("Function 1 - Return an array of Gender : Male characters (name only) \nFunction 2 - Return an array of Gender : Female characters (name only) \nFunction 3 - Return an array of Gender : N/A characters (name only) \nFunction 4 - Return an array of characters whose height is greater than 150 (name only) \nEnter Number"));
+  return num;
+}
+
+function findMale(){
+    let y = "male";
+    let pos;
+    for (var x = 0 ; x < gender.length; x++){
+        if(y == gender[x]){
+            pos = name[x];
+            let newLength = arr.push(pos);
+        }
+    }
+    
+}
+
+function findfemale(){
+    let y = "female";
+    let pos;
+    for (var x = 0 ; x < gender.length; x++){
+        if(y == gender[x]){
+            pos = name[x];
+            let newLength = arr.push(pos);
+        }
+    }
+    
+}
+
+function findNA(){
+    let y = "n/a";
+    let pos;
+    for (var x = 0 ; x < gender.length; x++){
+        if(y == gender[x]){
+            pos = name[x];
+            let newLength = arr.push(pos);
+        }
+    }
+    
+}
+function findHeight(){
+    let y = 150;
+    let pos;
+    for (var x = 0 ; x < gender.length; x++){
+        if(height[x] >= y){
+            pos = name[x];
+            let newLength = arr.push(pos);
+        }
+    }
+  
+}
+}
+</script>  
+<body>  
+</html>  
