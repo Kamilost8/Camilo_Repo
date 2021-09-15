@@ -1,0 +1,46 @@
+<html>  
+<body>  
+<script>
+const Arr = [];
+start();
+
+function start() {
+  var numOfIteration = selectIteration();
+  console.log(numOfIteration);
+  for(var x = 0; x < numOfIteration; x++){
+        var numbers = getNumbers();
+        doIteration(numOfIteration, numbers);
+    }
+    
+  alert(Arr);
+  let a
+  for(var x = 0; x < numOfIteration; x++){
+    let pos = Arr[x]%=5;
+    if(pos == 0){
+       a = pos;
+    }
+    }
+    if(a == 0){
+    alert("!!!!!! contains the number five");
+    }
+    else{
+    alert("there is no 5 in the array");
+    }
+}
+
+function getNumbers() {
+  var first = Number(prompt("Enter number"));
+  return first;
+}
+
+function selectIteration() {
+  return Number(prompt("Number of Iteration"));
+}
+
+function doIteration(a,b){
+  let newLength = Arr.push(b);
+}
+
+</script>  
+<body>  
+</html>  

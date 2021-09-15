@@ -1,0 +1,86 @@
+<html>  
+<body>  
+<script>
+const ArrLogin = [];
+const ArrPass = [];
+
+
+start();
+
+function start() {
+    var numOfUser = selectUser();
+    if(numOfUser >= 1){
+
+  for(var x = 0; x < numOfUser; x++){
+    let login = selectLogin(x);
+    doIterationlogin(login);
+    let password = selectPassword(x);
+    doIterationPass(password);
+    }
+ 
+    login = selectLoginFinal();
+    password = selectPasswordFinal();
+
+  let a
+  for(var x = 0; x < numOfUser; x++){
+    let pos = ArrLogin[x];
+    let pos1 = ArrPass[x];
+    if(pos == login &&  pos1 == password){
+        a = 1
+    }
+    }
+    if(a == 1){
+    alert("credentials are valid.");
+    }
+    else{
+    alert("credentials are invalid.");
+    }
+    }
+    else{
+        alert("invalid.");
+    }
+}
+
+function getNumbers() {
+  var first = Number(prompt("Enter number"));
+  return first;
+}
+function selectUser() {
+  var user = Number(prompt("Number of User"));
+  return user;
+}
+
+function selectLogin(x) {
+  var login = String(prompt(x+1 + ".) Enter Login"));
+  return login;
+}
+
+function selectPassword(x) {
+  var password = String(prompt(x+1 + ".) Enter Password"));
+  return password;
+}
+
+function selectLoginFinal() {
+  var login = String(prompt("Enter Login"));
+  return login;
+}
+
+function selectPasswordFinal() {
+  var password = String(prompt("Enter Password"));
+  return password;
+}
+
+
+
+function doIterationlogin(b){
+  let newLength = ArrLogin.push(b);
+}
+
+function doIterationPass(b){
+  let newLength = ArrPass.push(b);
+}
+
+
+</script>  
+<body>  
+</html>  
